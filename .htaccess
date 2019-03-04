@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^fixproapp\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.fixproapp.com/$1 [R,L]
+
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
